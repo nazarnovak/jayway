@@ -1,0 +1,22 @@
+.mainContainer {
+    margin: 40px;
+}
+
+.sectionsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.controlSection {
+    padding: 10px;
+    border-right: 1px solid #CCCCCC;
+    flex: 1 1 0;
+}
+
+.displaySection {
+    padding: 10px;
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

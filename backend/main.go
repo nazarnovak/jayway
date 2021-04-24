@@ -23,6 +23,7 @@ func main() {
 	cliMode := *cliPtr
 	serverMode := *serverPtr
 
+	// When no flags or both are provided
 	if (!cliMode && !serverMode) || (cliMode && serverMode) {
 		fmt.Printf("Error: Please specify one mode to run the application\n\n")
 		flag.Usage()

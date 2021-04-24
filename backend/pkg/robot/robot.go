@@ -2,6 +2,7 @@ package robot
 
 import (
 	"fmt"
+	"strings"
 )
 
 const (
@@ -108,7 +109,7 @@ func (r *Robot) Move(insts []Instruction, widthLimit, depthLimit int64) error {
 	r.setOrientationKey()
 
 	for _, inst := range insts {
-		switch inst {
+		switch toUpper(inst) {
 		case left:
 			r.rotateLeft()
 		case right:
@@ -154,6 +155,11 @@ func ValidateValues(width, depth int64, orientation Orientation) error {
 	return nil
 }
 
+// toUpper is a helper function to convert an instruction to upper case.
+func toUpper(s Instruction) Instruction {
+	return Instruction(strings.ToUpper(string(s)))
+}
+
 // ValidateInstructions validates any rotation or movement instructions.
 func ValidateInstructions(insts []Instruction) error {
 	if len(insts) == 0 {
@@ -164,7 +170,7 @@ func ValidateInstructions(insts []Instruction) error {
 		isAllowed := false
 
 		for _, allowedInstruction := range allowedInstructions {
-			if inst == allowedInstruction {
+			if toUpper(inst) == allowedInstruction {
 				isAllowed = true
 				break
 			}

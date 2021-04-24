@@ -1,0 +1,17 @@
+.displayHelper {
+    font-weight: bold;
+}
+
+.displayLegend {
+    margin-top: 10px;
+}
+
+.startRobot {
+    font-weight: bold;
+    color: blue;
+}
+
+.movedRobot {
+    font-weight: bold;
+    color: red;
+}

@@ -20,6 +20,7 @@ type RobotResponse struct {
 	Report  pkgRobot.Robot `json:"report,omitempty"`
 }
 
+// RobotHandler is a handler for POST request to /api/robot.
 func RobotHandler() func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		rr := RobotRequest{}
@@ -30,7 +31,7 @@ func RobotHandler() func(w http.ResponseWriter, r *http.Request) {
 			sendResponse(w, http.StatusBadRequest, true, "Could not parse incoming data", pkgRobot.Robot{})
 			return
 		}
-		fmt.Println("Received:", rr)
+
 		if err := pkgRoom.ValidateSize(rr.Room.Width, rr.Room.Depth); err != nil {
 			fmt.Println(err)
 

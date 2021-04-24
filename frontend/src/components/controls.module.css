@@ -1,0 +1,42 @@
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.controlGroup {
+    margin-bottom: 3px;
+    display: inline-flex;
+}
+
+.controlLabel {
+    width: 100px;
+}
+
+.error {
+    height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF3333;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttonAction {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 180px;
+    padding: 5px 10px;
+    background-color: #009900;
+    font-size: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.buttonAction:hover {
+    background-color: #006600;
+}
