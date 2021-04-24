@@ -9,9 +9,9 @@
 You can run the CLI directly by running
 `go run *.go -cli`
 
-Or you can build the executable first and run it
-`go build -o robot_cli`
-`./robot_cli -cli`
+Or you can build the executable first and run it  
+`go build -o robot_cli`  
+`./robot_cli -cli`  
 
 # Server mode
 
@@ -23,9 +23,9 @@ Or you can build the executable first and run it
 `cd backend`
 `go run *.go -server`
 
-Or you can build the executable first and run it
-`go build -o robot_server`
-`./robot_server -server
+Or you can build the executable first and run it  
+`go build -o robot_server`  
+`./robot_server -server`. 
 
 2. Start the frontend by doing
 `cd frontend` (from the root of the repo)
